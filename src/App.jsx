@@ -3,14 +3,14 @@ import axios from 'axios';
 import { io } from 'socket.io-client'; 
 import { CheckCircle, Clock, PlusCircle, FileText, Calendar, AlertTriangle } from 'lucide-react';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://parache-backend-production.up.railway.app');
 
 function App() {
   const [facturas, setFacturas] = useState([]);
   const [filtro, setFiltro] = useState('todas');
   const [form, setForm] = useState({ id_factura: '', nombre_proveedor: '', monto: '', fecha_a_realizar: '', detalle: '' });
 
-  const API_URL = 'http://localhost:5000/api/facturas';
+const API_URL = 'https://parache-backend-production.up.railway.app/api/facturas';
 
   const obtenerFacturas = async () => {
     try {
