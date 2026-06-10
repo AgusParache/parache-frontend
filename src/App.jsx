@@ -10,7 +10,7 @@ function App() {
   const [filtro, setFiltro] = useState('todas');
   const [form, setForm] = useState({ id_factura: '', nombre_proveedor: '', monto: '', fecha_a_realizar: '', detalle: '' });
 
-const API_URL = 'https://parache-backend-production.up.railway.app/api/facturas'; 
+const API_URL = 'https://parache-backend-production.up.railway.app'; 
 
   const obtenerFacturas = async () => {
     try {
